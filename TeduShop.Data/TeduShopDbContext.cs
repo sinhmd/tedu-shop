@@ -32,6 +32,7 @@ namespace TeduShop.Data
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatitic> VisitorStatitics { get; set; }
+        public DbSet<Error> Errors { get; set; }
 
     }
 }
