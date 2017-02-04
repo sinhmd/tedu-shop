@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeduShop.Model.Models
 {
-    [Table("ProductTags")]
+    [Table("PostTags")]
     public class PostTag
     {
-        [Key]
+        [Key, Column(Order =0)]
         public int PostId { get; set; }
 
-        [Key]
+        [Key, Column(Order = 1)]
         [MaxLength(50)]
         public string TagId { get; set; }
 

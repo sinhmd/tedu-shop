@@ -23,7 +23,8 @@ namespace TeduShop.Model.Models
         public String Description { get; set; }
         public int CategoryId { get; set; }
         public String Image { get; set; }
-        public XElement MoreImages { get; set; }
+        [Column(TypeName ="xml")]
+        public string MoreImages { get; set; }
         public Decimal Price { get; set; }
         public Decimal? PromotionPrice { get; set; }
         public int? Warranty { get; set; }

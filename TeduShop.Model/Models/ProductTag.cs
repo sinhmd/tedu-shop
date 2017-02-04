@@ -7,10 +7,10 @@ namespace TeduShop.Model.Models
     [Table("ProductTags")]
     public class ProductTag
     {
-        [Key]
+        [Key, Column(Order =0)]
         public int ProductId { get; set; }
 
-        [Key]
+        [Key, Column(Order =1)]
         [MaxLength(50)]
         public string TagId { get; set; }
 

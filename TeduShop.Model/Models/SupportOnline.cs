@@ -28,7 +28,6 @@ namespace TeduShop.Model.Models
         public String Email { get; set; }
         [MaxLength(50)]
         public String Facebook { get; set; }
-        [MaxLength(50)]
         public bool Status { get; set; }
     }
 }
