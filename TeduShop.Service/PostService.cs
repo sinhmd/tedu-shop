@@ -11,9 +11,9 @@ namespace TeduShop.Service
 {
     public interface IPostService
     {
-        void Add(Post post);
-        void Update(Post post);
-        void Delete(Post post);
+        Post Add(Post post);
+        Post Update(Post post);
+        Post Delete(Post post);
         IEnumerable<Post> GetAll();
         IEnumerable<Post> GetAllPostByCategory(int id, int page, int pageSize, out int totalRow);
         IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);
@@ -33,14 +33,14 @@ namespace TeduShop.Service
             this._unitOfWork = unitOfWork;
         }
 
-        public void Add(Post post)
+        public Post Add(Post post)
         {
-            _repository.Add(post);
+            return _repository.Add(post);
         }
 
-        public void Delete(Post post)
+        public Post Delete(Post post)
         {
-            _repository.Delete(post);
+            return _repository.Delete(post);
         }
 
         public IEnumerable<Post> GetAll()
@@ -80,9 +80,9 @@ namespace TeduShop.Service
             _unitOfWork.Commit();
         }
 
-        public void Update(Post post)
+        public Post Update(Post post)
         {
-            _repository.Update(post);
+            return _repository.Update(post);
         }
 
         public IEnumerable<Post> GetAllPostByCategory(int id, int page, int pageSize, out int totalRow)
