@@ -43,12 +43,12 @@ namespace TeduShop.Service
 
         public IEnumerable<PostCategory> GetAll()
         {
-            return _repository.GetAll(new string[] { "Posts"});
+            return _repository.GetAll();
         }
 
         public IEnumerable<PostCategory> GetAllPaging(int page, int pageSize, out int totalRow)
         {
-            return _repository.GetMultiPaging(x=>x.Status, out totalRow, page, pageSize,new string[] { "Posts"});
+            return _repository.GetMultiPaging(x=>x.Status, out totalRow, page, pageSize);
         }
 
         public PostCategory GetById(int id)
